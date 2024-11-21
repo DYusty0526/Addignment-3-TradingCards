@@ -5,7 +5,7 @@ using System.Numerics;
 
 namespace Addignment_3_TradingCards
 {
-    internal class SportsDatabase
+    public class SportsDatabase
     {
         public List<Team> Teams { get; private set; }
 
@@ -67,5 +67,23 @@ namespace Addignment_3_TradingCards
         {
             return Teams.SelectMany(t => t.Players).Where(p => p.Goals >= minGoals).ToList();
         }
+
+        public List<Card> GetAllCards()
+        {
+            return Teams
+                .SelectMany(t => t.Players)
+                .Select(p => new Card
+                {
+                    Name = p.Name,
+                    Team = p.Team,
+                    MatchesPlayed = p.MatchesPlayed,
+                    Goals = p.Goals,
+                    Assists = p.Assists,
+                    Cards = p.Cards,
+                    PhotoPath = p.PhotoPath
+                }).ToList();
+        }
     }
+
 }
+

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Addignment_3_TradingCards
 {
-    internal class Player
+    public class Player
     {
         public string Name { get; set; }
         public string Team { get; set; }

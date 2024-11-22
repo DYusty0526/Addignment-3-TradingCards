@@ -44,14 +44,15 @@ namespace Addignment_3_TradingCards
                 };
             }
         }
-        public Color StatColor()
+        public Color StatColor(int value)
         {
-            return PerformanceLevel switch
-            {
-                "High" => Color.Green,
-                "Moderate" => Color.Orange,
-                _ => Color.Red,
-            };
+            if (value > 10)
+                return Color.Green;
+            else if (value > 5)
+                return Color.Orange;
+            else
+                return Color.Red;
         }
+
     }
 }

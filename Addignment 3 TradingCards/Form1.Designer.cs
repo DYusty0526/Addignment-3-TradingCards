@@ -39,15 +39,20 @@
             lbl_Cards = new Label();
             label1 = new Label();
             label2 = new Label();
+            label3 = new Label();
+            btn_AddCard = new Button();
+            btn_RemoveCard = new Button();
+            btn_Filter = new Button();
+            btn_ShowAll = new Button();
             ((System.ComponentModel.ISupportInitialize)pb_PlayerImage).BeginInit();
             SuspendLayout();
             // 
             // Lst_Cards
             // 
             Lst_Cards.FormattingEnabled = true;
-            Lst_Cards.Location = new Point(278, 190);
+            Lst_Cards.Location = new Point(225, 170);
             Lst_Cards.Name = "Lst_Cards";
-            Lst_Cards.Size = new Size(150, 104);
+            Lst_Cards.Size = new Size(252, 124);
             Lst_Cards.TabIndex = 0;
             Lst_Cards.SelectedIndexChanged += Lst_Cards_SelectedIndexChanged;
             // 
@@ -62,16 +67,16 @@
             // 
             // pb_PlayerImage
             // 
-            pb_PlayerImage.Location = new Point(25, 12);
+            pb_PlayerImage.Location = new Point(12, 12);
             pb_PlayerImage.Name = "pb_PlayerImage";
-            pb_PlayerImage.Size = new Size(194, 202);
+            pb_PlayerImage.Size = new Size(207, 202);
             pb_PlayerImage.TabIndex = 3;
             pb_PlayerImage.TabStop = false;
             // 
             // lbl_Team
             // 
             lbl_Team.AutoSize = true;
-            lbl_Team.Location = new Point(332, 17);
+            lbl_Team.Location = new Point(252, 17);
             lbl_Team.Name = "lbl_Team";
             lbl_Team.Size = new Size(50, 20);
             lbl_Team.TabIndex = 4;
@@ -80,9 +85,9 @@
             // pnl_CardBorder
             // 
             pnl_CardBorder.BorderStyle = BorderStyle.FixedSingle;
-            pnl_CardBorder.Location = new Point(254, 40);
+            pnl_CardBorder.Location = new Point(225, 40);
             pnl_CardBorder.Name = "pnl_CardBorder";
-            pnl_CardBorder.Size = new Size(201, 44);
+            pnl_CardBorder.Size = new Size(252, 59);
             pnl_CardBorder.TabIndex = 5;
             // 
             // lbl_MatchesPlayed
@@ -124,7 +129,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(240, 149);
+            label1.Location = new Point(225, 136);
             label1.Name = "label1";
             label1.Size = new Size(237, 20);
             label1.TabIndex = 10;
@@ -139,11 +144,65 @@
             label2.TabIndex = 11;
             label2.Text = "Stats:";
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(381, 17);
+            label3.Name = "label3";
+            label3.Size = new Size(96, 20);
+            label3.TabIndex = 12;
+            label3.Text = "Team Colour:";
+            // 
+            // btn_AddCard
+            // 
+            btn_AddCard.Location = new Point(225, 300);
+            btn_AddCard.Name = "btn_AddCard";
+            btn_AddCard.Size = new Size(94, 29);
+            btn_AddCard.TabIndex = 13;
+            btn_AddCard.Text = "Add Player";
+            btn_AddCard.UseVisualStyleBackColor = true;
+            btn_AddCard.Click += btn_AddCard_Click;
+            // 
+            // btn_RemoveCard
+            // 
+            btn_RemoveCard.Location = new Point(368, 300);
+            btn_RemoveCard.Name = "btn_RemoveCard";
+            btn_RemoveCard.Size = new Size(94, 29);
+            btn_RemoveCard.TabIndex = 14;
+            btn_RemoveCard.Text = "Remove Player";
+            btn_RemoveCard.UseVisualStyleBackColor = true;
+            btn_RemoveCard.Click += btn_RemoveCard_Click;
+            // 
+            // btn_Filter
+            // 
+            btn_Filter.Location = new Point(225, 338);
+            btn_Filter.Name = "btn_Filter";
+            btn_Filter.Size = new Size(94, 29);
+            btn_Filter.TabIndex = 15;
+            btn_Filter.Text = "Filter";
+            btn_Filter.UseVisualStyleBackColor = true;
+            btn_Filter.Click += btn_Filter_Click;
+            // 
+            // btn_ShowAll
+            // 
+            btn_ShowAll.Location = new Point(368, 338);
+            btn_ShowAll.Name = "btn_ShowAll";
+            btn_ShowAll.Size = new Size(94, 29);
+            btn_ShowAll.TabIndex = 16;
+            btn_ShowAll.Text = "Show All";
+            btn_ShowAll.UseVisualStyleBackColor = true;
+            btn_ShowAll.Click += btn_ShowAll_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(489, 450);
+            Controls.Add(btn_ShowAll);
+            Controls.Add(btn_Filter);
+            Controls.Add(btn_RemoveCard);
+            Controls.Add(btn_AddCard);
+            Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(lbl_Cards);
@@ -175,5 +234,10 @@
         private Label lbl_Cards;
         private Label label1;
         private Label label2;
+        private Label label3;
+        private Button btn_AddCard;
+        private Button btn_RemoveCard;
+        private Button btn_Filter;
+        private Button btn_ShowAll;
     }
 }

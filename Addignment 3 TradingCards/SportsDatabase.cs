@@ -11,7 +11,6 @@ namespace Addignment_3_TradingCards
 
         public SportsDatabase()
         {
-            // Initialize the teams and players
             Teams = new List<Team>
             {
                 new Team
@@ -83,7 +82,24 @@ namespace Addignment_3_TradingCards
                     PhotoPath = p.PhotoPath
                 }).ToList();
         }
-    }
+        public void AddPlayerToTeam(Player player, string teamName)
+        {
+            var team = Teams.FirstOrDefault(t => t.Name == teamName);
+            if (team != null)
+            {
+                team.Players.Add(player);
+            }
+        }
 
+        public void RemovePlayerFromTeam(string playerName, string teamName)
+        {
+            var team = Teams.FirstOrDefault(t => t.Name == teamName);
+            var playerToRemove = team?.Players.FirstOrDefault(p => p.Name == playerName);
+            if (playerToRemove != null)
+            {
+                team.Players.Remove(playerToRemove);
+            }
+        }
+    }
 }
 

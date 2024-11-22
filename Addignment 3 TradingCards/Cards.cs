@@ -24,7 +24,7 @@ namespace Addignment_3_TradingCards
                 return Team switch
                 {
                     "Liverpool" => Color.Red,
-                    "Arsenal" => Color.DarkRed,
+                    "Arsenal" => Color.Gold,
                     "Manchester United" => Color.Black,
                     "Manchester City" => Color.Blue,
                     _ => Color.Gray,
@@ -49,7 +49,7 @@ namespace Addignment_3_TradingCards
             return PerformanceLevel switch
             {
                 "High" => Color.Green,
-                "Moderate" => Color.Yellow,
+                "Moderate" => Color.Orange,
                 _ => Color.Red,
             };
         }

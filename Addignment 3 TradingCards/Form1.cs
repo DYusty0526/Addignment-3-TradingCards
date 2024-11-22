@@ -21,12 +21,13 @@ namespace Addignment_3_TradingCards
             if (Lst_Cards.SelectedItem is Card selectedCard)
             {
                 pb_PlayerImage.ImageLocation = selectedCard.PhotoPath;
+
                 lbl_PlayerName.Text = selectedCard.Name;
                 lbl_Team.Text = selectedCard.Team;
                 lbl_MatchesPlayed.Text = $"Matches Played: {selectedCard.MatchesPlayed}";
                 lbl_Goals.Text = $"Goals: {selectedCard.Goals}";
                 lbl_Assists.Text = $"Assists: {selectedCard.Assists}";
-                lbl_Cards.Text = $"Cards: {selectedCard.Cards}";
+                lbl_Cards.Text = $"Disciplinary Cards: {selectedCard.Cards}";
 
                 pnl_CardBorder.BackColor = selectedCard.BorderColor;
 
